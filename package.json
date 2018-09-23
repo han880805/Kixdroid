@@ -10,9 +10,6 @@
     "ytdl-core": "^0.25.0"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/han880805/Kixdroid.git"
