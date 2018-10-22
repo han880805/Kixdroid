@@ -38,12 +38,13 @@ const commands = {
             }
           });
           dispatcher.on('start', () => {
+            if (!song.url.startsWith('http')) song.url = `https://www.youtube.com/watch?v=${song.url}`;
             msg.channel.send(new discord.RichEmbed().setAuthor(`目前播放`).setDescription(song.url).setTitle(song.info.title).setThumbnail(song.info.player_response.videoDetails.thumbnail.thumbnails.pop().url));
             console.log(queue);
           });
           let tmp = queue[msg.guild.id].songs.shift();
           dispatcher.on('error', async (err) => {
-            error(msg, err);
+            console.log(msg + err);
             collector.stop();
             msg.author.username = "我";
             if ((tmp === undefined) && queue[msg.guild.id].autoplay) await commands.add(song.info.related_videos[0].id, msg);
