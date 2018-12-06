@@ -9,6 +9,9 @@
     "node-opus": "^0.3.0",
     "ytdl-core": "^0.25.0"
   },
+  "scripts": {
+    "start": "node main.js"
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",
@@ -16,6 +19,9 @@
   },
   "author": "Kix",
   "license": "MIT",
+  "engines": {
+    "none": "10.x"
+  },
   "bugs": {
     "url": "https://github.com/han880805/Kixdroid/issues"
   },
